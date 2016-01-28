@@ -1,4 +1,4 @@
-package fibonacci
+package emath
 
 /**
  * Get fibonacci n-length

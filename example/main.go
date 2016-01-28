@@ -1,9 +1,9 @@
 package main
 
-import "fibonacci"
+import "emath"
 import "fmt"
 
 func main() {
-	f := fibonacci.CalculateOne(10);
+	f := emath.CalculateOne(10);
 	fmt.Printf("%v", f)
 }
