@@ -2,6 +2,7 @@ package main
 
 import "emath"
 import "fmt"
+import "string"
 
 func main() {
 	testFibonnaci()
@@ -14,5 +15,5 @@ func testFibonnaci() {
 }
 
 func testString() {
-	fmt.Printf("to do")
+	fmt.Printf(string.Reverse("Hello World, dawg"))
 }
