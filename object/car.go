@@ -1,5 +1,11 @@
 package object
 
+import "math/rand"
+
+type Rider interface {
+	Speed() int
+}
+
 type Car struct {
 	Color string
 	Engine Engine
@@ -20,4 +26,17 @@ type Engine struct {
  */
 type Suv struct {
 	Car
+}
+
+func (s Suv) Speed() int {
+	r := rand.New(rand.NewSource(99))
+	return r.Int()
+}
+
+type Coupe struct {
+	Car
+}
+
+func (c Coupe) Speed() int {
+	return 100
 }

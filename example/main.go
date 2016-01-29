@@ -12,8 +12,11 @@ func main() {
 }
 
 func testFibonnaci() {
-	f := emath.CalculateOne(10);
-	fmt.Printf("%v", f)
+	f := emath.Calculate(10);
+
+	for _,number := range f {
+		fmt.Printf("%d", number)
+	}
 }
 
 func testString() {
@@ -21,12 +24,19 @@ func testString() {
 }
 
 func testObject() {
-	c := object.Car {
-		Color: "Red",
-		Engine: object.Engine {
-			Capacity: 1.8,
-			Power: 120,
-		},
+	suv := object.Suv{}
+	suv.Color = "Red"
+	suv.Engine = object.Engine{
+		Capacity: 1.8,
+		Power: 120,
 	}
-	fmt.Printf("%v", c)
+
+	printCarSpeed(suv)
+
+	coupe := object.Coupe{}
+	printCarSpeed(coupe)
+}
+
+func printCarSpeed(car object.Rider)  {
+	fmt.Printf("%v", car.Speed())
 }
