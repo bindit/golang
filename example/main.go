@@ -1,9 +1,11 @@
 package main
 
-import "emath"
-import "fmt"
-import "string"
-import "object"
+import (
+	"object/car"
+	"emath"
+	"string"
+	"fmt"
+)
 
 func main() {
 	testFibonnaci()
@@ -24,19 +26,23 @@ func testString() {
 }
 
 func testObject() {
-	suv := object.Suv{}
-	suv.Color = "Red"
-	suv.Engine = object.Engine{
+	suv := car.Suv {
+		car.Car {
+			Color: "Red",
+		},
+	}
+	//suv.Color = "Red"
+	suv.Engine = car.Engine {
 		Capacity: 1.8,
 		Power: 120,
 	}
 
 	printCarSpeed(suv)
 
-	coupe := object.Coupe{}
+	coupe := car.Coupe {}
 	printCarSpeed(coupe)
 }
 
-func printCarSpeed(car object.Rider)  {
+func printCarSpeed(car car.Rider)  {
 	fmt.Printf("%v", car.Speed())
 }
