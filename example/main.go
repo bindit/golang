@@ -17,12 +17,14 @@ func testFibonnaci() {
 	f := emath.Calculate(10);
 
 	for _,number := range f {
-		fmt.Printf("%d", number)
+		fmt.Printf("%d\n", number)
 	}
 }
 
 func testString() {
-	fmt.Printf(string.Reverse("Hello World, dawg"))
+	fmt.Printf("%s\n", string.Reverse("Hello World, dawg"))
+	fmt.Printf("%d\n", "Hello"[1]) //return byte representation
+	fmt.Printf("%s\n", "Hello" + " " + "World")
 }
 
 func testObject() {
@@ -44,5 +46,5 @@ func testObject() {
 }
 
 func printCarSpeed(car car.Rider)  {
-	fmt.Printf("%v", car.Speed())
+	fmt.Printf("%v\n", car.Speed())
 }
