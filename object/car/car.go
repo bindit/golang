@@ -4,6 +4,10 @@ type Rider interface {
 	Speed() int
 }
 
+type Speeder interface {
+	Speed() int
+}
+
 type Car struct {
 	Color string
 	Engine Engine
